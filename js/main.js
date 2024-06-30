@@ -21,7 +21,10 @@ $(".closebtn,.overlay").click( function() {
   $('body').removeClass('ovh');
 });
 
-
+$(".down[data-toggle='collapse']").on('click', function() {
+  $(this).parent().children('.collapse').collapse('toggle');
+  $(this).parent().siblings().find('.collapse.in').collapse('hide');
+});
 var $mediaElements = $('.vision');
 $('.tabs-sec .tab-a').click(function (e) {
     e.preventDefault();
